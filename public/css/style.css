@@ -1,0 +1,236 @@
+html{
+	/* background: #4eacfe; */  /* fallback for old browsers */
+	/* background: -webkit-linear-gradient(to right, #01f0fe, #4eacfe); */  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #01f0fe, #4eacfe); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Josefin Sans', sans-serif;
+	/* background-image: url("pattern.png"); */
+	/* background-image: url("pattern.png"), linear-gradient(to right, #01f0fe, #4eacfe); */
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+html::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+	background-color: #4dacfe;
+}
+
+html::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #4dacfe;
+	height: 10px;
+}
+
+html::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #F44336;
+}
+
+body {
+    margin: 100px 25px 25px;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.image-header {
+    position: absolute;
+    display: flex;
+    width: inherit;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(100% - 50px);
+    max-height: 100%;
+}
+
+.float-header {
+    /* position: relative; */
+    margin-top: -32px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.image-background {
+    background: #fff;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    left: 0px;
+    right: 0;
+    /* top: 80px; */
+    bottom: 0;
+    margin: auto;
+}
+
+.app-title {
+    padding: 0 0 5px 0;
+    margin: 0;
+    width: 75%;
+    text-align: center;
+    background: -webkit-linear-gradient(left, #01f0fe, #4eacfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+	font-size: 1em;
+	color: #607D8B;
+	letter-spacing: 2px;
+	margin: 25px 0;
+}
+
+input#searchField {
+    width: 90%;
+    padding: 7px;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.search-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    margin: 0;
+    align-items: center;
+    background: #EEEEEE;
+    border-radius: 20px;
+}
+
+h1#title {
+    position: fixed;
+    color: rgba(255, 255, 255, 0.9);
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    /* height: 95%; */
+    margin: 0;
+    left: 10px;
+    /* right: 10px; */
+    bottom: 10px;
+    display: none;
+    font-size: 5em;
+    font-family: 'Candal';
+}
+
+button#search {
+    border: none;
+    background: none;
+    color: #607D8B;
+}
+
+.image-header img {
+	height: 32px;
+	width: 32px;
+}
+
+#search-box {
+    height: 190px;
+}
+
+article {
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #fff;
+    border-radius: 30px;
+    display: flex;
+    margin: 100px auto auto auto;
+    max-height: 100%;
+    max-width: 100%;
+    left: 0;
+    width: 850px;
+}
+
+#books-list {
+    /* height: 200px; */
+    margin-top: 100px;
+    display: block;
+    padding: 25px 0;
+}
+
+#query-header {
+    text-align: center;
+    margin: 25px 55px;
+    font-size: 1.5em;
+}
+
+.book-wrapper {
+    padding: 25px 0;
+    margin: 0 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px dashed #607D8B;
+}
+
+.list-value {
+    font-style: italic;
+    font-size: 5em;
+    color: #01effe;
+}
+
+.book-cover {
+    height: 150px;
+    margin: 0 25px;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-info * {
+    padding-bottom: 5px;
+}
+
+.book-title {
+    margin: 0;
+}
+
+.book-details::before {
+    font-weight: bold;
+}
+
+.book-author::before {
+    content: "Author: ";
+}
+
+.book-publisher::before {
+    content: "Publisher: ";
+}
+
+.book-more {
+    text-align: center;
+    margin-top: 10px;
+    background: #3F51B5;
+    border-radius: 20px;
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon::after {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.book-more::after {
+    content: "\f35d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    margin-left: 8px;
+}

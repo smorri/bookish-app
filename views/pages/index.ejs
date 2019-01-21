@@ -1,0 +1,42 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<% include ../partials/head %>
+	</head>
+
+	<body>
+ 		<main>
+ 			<h1 id="title">bookish app</h1>
+   			<section>
+				<article id="search-box">
+   					 <div class="image-header">
+                        <div class="float-header">
+                            <img src="books2.png">
+                        </div>				
+                        <h5 class="app-title">bookish app</h5>
+                        <h2>Enter keyword(s) and click search to display results.</h2>
+                        <div class="search-wrapper">
+                            <input id="searchField">
+                            <button id="search" class="fas fa-search"></button>
+                        </div>
+                    </div>
+				</article>
+				<article id="books-list">
+    				<h2 id="query-header">Here are your results for "query"</h2>
+    				<div class="book-wrapper">
+   						<span class="list-value">1.</span>
+						<img class="book-cover" src="cover.jpg">
+    					<div class="book-info">
+    						<h3 class="book-title">The 7 Habits of Highly Effective People</h3>	<span class="book-details book-author">Stephen R. Covey</span>
+							<span class="book-details book-publisher">Simon &amp; Schuster</span>
+   		 					<a class="book-more" href="#">View More Information</a>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>
