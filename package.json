@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/smorri/booklook-app/issues"
   },
-  "homepage": "https://github.com/smorri/booklook-app#readme"
+  "homepage": "https://github.com/smorri/booklook-app#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
