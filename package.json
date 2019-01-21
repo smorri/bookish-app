@@ -1,5 +1,5 @@
 {
-  "name": "bookish-app",
+  "name": "booklook-app",
   "version": "1.0.0",
   "description": "A Node.js application that utilizes the Google Books API",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smorri/bookish-app.git"
+    "url": "git+https://github.com/smorri/booklook-app.git"
   },
   "author": "Samone Morris",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smorri/bookish-app/issues"
+    "url": "https://github.com/smorri/booklook-app/issues"
   },
-  "homepage": "https://github.com/smorri/bookish-app#readme"
+  "homepage": "https://github.com/smorri/booklook-app#readme"
 }
