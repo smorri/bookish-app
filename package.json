@@ -2,6 +2,9 @@
   "name": "booklook-app",
   "version": "1.0.0",
   "description": "A Node.js application that utilizes the Google Books API",
+  "engines": {
+    "node": "10.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
