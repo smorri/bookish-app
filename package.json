@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/smorri/booklook-app#readme",
   "dependencies": {
-  	"ejs": "^1.0.0",
+    "ejs": "^2.5.6",
     "express": "^4.16.4"
   }
 }
