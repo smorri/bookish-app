@@ -4,5 +4,10 @@ const PORT = process.env.PORT || 5000;
 var application = express();
 
 application
-	.get('/', function( req, res ){ res.send( JSON.stringify({ Hello: 'World'})); })
-	.listen( PORT, function (){ console.log( 'Listening on $( PORT )' ); } )
+	.set( 'view-engine', 'ejs' )
+	.get( '/', function( req, res ){ 
+			res.render( 'pages/index' );
+		})
+	.listen( PORT, function (){ 
+			console.log( 'Listening on port:', PORT ) 
+		});
