@@ -49,6 +49,7 @@ $( document ).ready( function(){
 			errorMessage.id = "search-error";
 			$( errorMessage ).text( "Enter some text before performing your search!" );
 			$( "#search-container" ).append( $( errorMessage ) );
+			$( "#input-clear" ).css( "visibility", "hidden" );
 
 			return "";
 	   	}// end if
@@ -70,6 +71,37 @@ $( document ).ready( function(){
 	// 	$( "#search-container" ).css( "margin-top", centerPosition );
 	// 	$( ".search-header" ).css( "top", centerPosition );
 	// }// end function centerSearchContainer()
+
+	/**
+	 * -----------------------------------------------------------------------------------------
+	 * setWindowScrollTrigger()
+	 * 
+	 * Allows the user to auto-scroll to the top of the page if they navigate too far down.
+	 * This is especially useful if a lot of book items are loaded and for users on small
+	 * screens
+	 * -----------------------------------------------------------------------------------------
+	 */ 
+	setWindowScrollTrigger = function(){
+		// -------------------------------------------------------------------------------------
+		// Set the parameters which will activate the 'to top of page' button visibility.
+		// If the user scrolls down such that we are 200 pixels from the top of the page,
+		// display the 'to top' button. Otherwise, hide it.
+		$( window ).scroll( function(){
+			if( $( this ).scrollTop() > 200 ){
+				$( "#top" ).fadeIn();
+			} else {
+				$( "#top" ).fadeOut();
+			}// end if / else 
+		});
+
+		// -------------------------------------------------------------------------------------
+		// Implements the actual click of the 'to top of page' button. If the button is visible and
+		// is clicked, the window will return to the top of the page. This is useful if a large
+		// number of book items are displayed and prevents the user from manually scrolling.
+		$( "#top" ).click(function(){
+        	$( "html, body" ).animate( { scrollTop : 0 }, 1000 );
+    	});
+	}// end function setWindowScrollTrigger()
 
 	/**
 	 * -----------------------------------------------------------------------------------------
@@ -100,12 +132,8 @@ $( document ).ready( function(){
 			// into the search field. If this event is detected, then display or hide the
 			// clear field button if text appears in the field or it is empty respectively.
 			else {
-				console.log( "NUM = " + numChars );
-				console.log( "VISI = " + clearVisibility );
-
 				if( clearVisibility == "visible" ){
 					if( numChars < 1 ){
-						console.log( "HERE" );
 						$( "#input-clear" ).css( "visibility", "hidden" );
 					}// end if
 				} else {
@@ -383,7 +411,6 @@ $( document ).ready( function(){
 						loadMoreButton.id = "load-more";
 						$( loadMoreButton ).append( "<span>Load More</span>" )
 										   .append( "<i class=\"fas fa-angle-double-down\"></i>" );
-						//$( loadMoreButton ).text( "Load More Results" );
 						$( loadMoreButton ).on( "click", loadResultsBatch );
 						$( resultsContainer ).append( $( loadMoreButton ) );
 					}// end if
@@ -445,8 +472,8 @@ $( document ).ready( function(){
 	/* ======================================================================================= */
 
 	setSearchFieldTriggers();	// 'Enter' key and input length > 1 triggers defined
+	setWindowScrollTrigger();	// Functionality for scrolling and 'to top of page' button
 	// centerSearchContainer();	// Center the search box on the page
-
 
 	$( "#search-container" ).fadeIn( "fast", function(){
 		$( ".header-wrapper" ).fadeTo( 1500, 1 );

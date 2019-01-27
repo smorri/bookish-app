@@ -53,7 +53,7 @@
 
     #input-clear { font-size: 0.8em; }
 
-    #search-button { font-size: 1.1em;  padding: 0 15px; }
+    #search-button { font-size: 1.1em; padding: 0 15px; }
 
     .row-wrapper { flex-direction: column; }
 
@@ -124,7 +124,7 @@
 
     .header-wrapper img { height: 32px; width: 32px; }
 
-    #search-button{  padding: initial; }
+    #search-button{ padding: 10px; }
 }
 
 /* ======================================================================================= */
@@ -234,6 +234,24 @@ article {
 /* ======================================================================================= */
 /* ------------------------------- SEARCH CONTAINER STYLING ------------------------------ */
 /* ======================================================================================= */
+
+#top {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    font-size: 2.5em;
+    color: #000;
+    border-radius: 40px;
+    text-align: center;
+    display: none;
+}
+
+#top::after {
+    content: "Top";
+    display: block;
+    font-size: 0.4em;
+    font-variant: small-caps;
+}
 
 #search-container {
     /*height: 170px;*/
