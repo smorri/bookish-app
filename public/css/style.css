@@ -349,6 +349,7 @@ article {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    word-break: break-word;
 }
 
 #loader img {
@@ -362,6 +363,7 @@ article {
     padding: 25px 0;
     margin: 0 55px;
     border-bottom: 1px dashed #607D8B;
+    word-break: break-word;
 }
 
 .results-none { 

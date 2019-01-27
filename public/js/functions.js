@@ -330,8 +330,7 @@ $( document ).ready( function(){
 				// since this AJAX call may perform pretty quickly. I just want the
 				// loader to display for a bit longer...
 				$( "#loader" ).delay( 5000 ).fadeOut( function(){
-					// Enable horizontal page scroll, the search input field and button
-//					$( "html" ).css( "overflow-y", "initial" );
+					$( "#loader" ).remove();
 		    		$( "#input-field" ).removeAttr( "disabled" );
 		    		$( "#input-clear" ).removeAttr( "disabled" );
     				$( "#search-button" ).removeAttr( "disabled" );
