@@ -2,7 +2,6 @@
 /* ----------------------------------- RESPONSIVE DESIGN  -------------------------------- */
 /* ======================================================================================= */
 
-
 /* Extra small devices (phones, 425px and down) */
 @media only screen and (max-width: 425px) {
     h2 { font-size: 1.5em; }
@@ -35,7 +34,7 @@
 } 
 
 /* Small devices (portrait tablets and large phones, 425px and up) */
-@media only screen and (min-width: 425px)  {
+@media only screen and (min-width: 425px) {
     h2 { font-size: 1.4em; }
 
     #search-container { height: 240px; }
@@ -66,7 +65,7 @@
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px)  {
+@media only screen and (min-width: 768px) {
     h2 { font-size: 1.3em; }
 
     #search-container { height: 220px; }
@@ -95,7 +94,7 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px)  {
+@media only screen and (min-width: 992px) {
     h2 { font-size: 1.2em; }
 
     #search-container { height: 190px; }
@@ -114,7 +113,7 @@
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px)  {
+@media only screen and (min-width: 1200px) {
     h2 { font-size: 1em; }
 
     #search-container { height: 170px; }
