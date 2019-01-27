@@ -3,8 +3,8 @@
 /* ======================================================================================= */
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Extra small devices (phones, 425px and down) */
+@media only screen and (max-width: 425px) {
     h2 { font-size: 1.5em; }
 
     #search-container { height: 310px; }
@@ -34,8 +34,8 @@
     .book-details:before{ display: block; }
 } 
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)  {
+/* Small devices (portrait tablets and large phones, 425px and up) */
+@media only screen and (min-width: 425px)  {
     h2 { font-size: 1.4em; }
 
     #search-container { height: 240px; }
