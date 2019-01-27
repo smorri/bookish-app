@@ -56,20 +56,20 @@ $( document ).ready( function(){
 	   	return queryText;
 	}// end function validateUserInput()
 
-	/**
-	 * -----------------------------------------------------------------------------------------
-	 * centerSearchContainer()
-	 * 
-	 * When the application loads for the first time, the search container should be centered
-	 * in the middle of the page. This function calculates the 'centered' value and sets the
-	 * top margin and top attributes of the search container and header respectively.
-	 * -----------------------------------------------------------------------------------------
-	 */
-	centerSearchContainer = function(){
-		centerPosition = ( window.innerHeight / 2 ) - 82;
-		$( "#search-container" ).css( "margin-top", centerPosition );
-		$( ".search-header" ).css( "top", centerPosition );
-	}// end function centerSearchContainer()
+	// *
+	//  * -----------------------------------------------------------------------------------------
+	//  * centerSearchContainer()
+	//  * 
+	//  * When the application loads for the first time, the search container should be centered
+	//  * in the middle of the page. This function calculates the 'centered' value and sets the
+	//  * top margin and top attributes of the search container and header respectively.
+	//  * -----------------------------------------------------------------------------------------
+	 
+	// centerSearchContainer = function(){
+	// 	centerPosition = ( window.innerHeight / 2 ) - 82;
+	// 	$( "#search-container" ).css( "margin-top", centerPosition );
+	// 	$( ".search-header" ).css( "top", centerPosition );
+	// }// end function centerSearchContainer()
 
 	/**
 	 * -----------------------------------------------------------------------------------------
@@ -78,17 +78,54 @@ $( document ).ready( function(){
 	 * Users can activate the click action for the 'search' (Go) button by clicking enter.
 	 * -----------------------------------------------------------------------------------------
 	 */
-	setSearchFieldTrigger = function(){
-		$( "#input-field" ).on( "keyup", function( event ){
-			event.preventDefault();
-			
+	setSearchFieldTriggers = function(){
+		var clearVisibility, 
+		    numChars;
+
+		$( "#input-field" ).bind("change paste keyup", function( event ) {
+			clearVisibility = $( "#input-clear" ).css( "visibility" );
+		    numChars = $( "#input-field" ).val().length;
+
 			// ---------------------------------------------------------------------------------
-			// Key Code of 13 = 'Enter' key
-			if( event.keyCode == 13 ){
+			// The user has hit the 'Enter' key which is equivalent to key code of 13 
+			if( event.type == "keyup" && event.keyCode == 13 ){
+				event.preventDefault();
 				$( "#search-button" ).click();
+
+				return;
+			}// end if
+
+			// ---------------------------------------------------------------------------------
+			// Otherwise the user has hit a key other than 'Enter' OR they have pasted text 
+			// into the search field. If this event is detected, then display or hide the
+			// clear field button if text appears in the field or it is empty respectively.
+			else {
+				console.log( "NUM = " + numChars );
+				console.log( "VISI = " + clearVisibility );
+
+				if( clearVisibility == "visible" ){
+					if( numChars < 1 ){
+						console.log( "HERE" );
+						$( "#input-clear" ).css( "visibility", "hidden" );
+					}// end if
+				} else {
+					if( numChars > 0 ){
+						$( "#input-clear" ).css( "visibility", "visible" );
+					}// end if
+				}// end if / else
+			}// end else
+		});
+
+		// -------------------------------------------------------------------------------------
+		// As long as text is entered into the search field and the 'Clear' button is visible
+		// can text be cleared from the field.
+		$( "#input-clear" ).on( "click", function(){
+			if( clearVisibility == "visible" ){				
+				$( "#input-field" ).val( "" );
+				$( "#input-clear" ).css( "visibility", "hidden" );
 			}// end if
 		});
-	}// end function setSearchFieldTrigger()	
+	}// end function setSearchFieldTriggers()	
 
 	/**
 	 * -----------------------------------------------------------------------------------------
@@ -294,8 +331,9 @@ $( document ).ready( function(){
 				// loader to display for a bit longer...
 				$( "#loader" ).delay( 5000 ).fadeOut( function(){
 					// Enable horizontal page scroll, the search input field and button
-					$( "html" ).css( "overflow-y", "initial" );
+//					$( "html" ).css( "overflow-y", "initial" );
 		    		$( "#input-field" ).removeAttr( "disabled" );
+		    		$( "#input-clear" ).removeAttr( "disabled" );
     				$( "#search-button" ).removeAttr( "disabled" );
 
 					booksData = data;
@@ -380,6 +418,7 @@ $( document ).ready( function(){
 		// To prevent the user from making additional AJAX calls while a search is in
 		// progress, disable the search field and button.
 		$( "#input-field" ).prop( "disabled", true );
+		$( "#input-clear" ).prop( "disabled", true );
 		$( "#search-button" ).prop( "disabled", true );
 
    		// -------------------------------------------------------------------------------------
@@ -406,8 +445,8 @@ $( document ).ready( function(){
 	/* ----------------------------------------- MAIN ---------------------------------------- */
 	/* ======================================================================================= */
 
-	setSearchFieldTrigger();	// Allow users to hit 'Enter' to begin the search
-	centerSearchContainer();	// Center the search box on the page
+	setSearchFieldTriggers();	// 'Enter' key and input length > 1 triggers defined
+	// centerSearchContainer();	// Center the search box on the page
 
 
 	$( "#search-container" ).fadeIn( "fast", function(){
@@ -425,23 +464,23 @@ $( document ).ready( function(){
 				return;
 			}// end if
 
-			// ---------------------------------------------------------------------------------
-			// When the application loads for the first time, the search container is
-			// centered on the page. This centered styling should only occur once, so we need to 
-			// animate the search container to the top of the page.
-			var currentPosition = $("#search-container").css( "margin-top" )
-														.replace( "px", "" );
-			if( currentPosition > "100" ){
-				$( "#search-container" ).animate(
-					{ 'margin-top': '100px' }, 
-					{ duration: 1500, queue: false }
-				);
+			// // ---------------------------------------------------------------------------------
+			// // When the application loads for the first time, the search container is
+			// // centered on the page. This centered styling should only occur once, so we need to 
+			// // animate the search container to the top of the page.
+			// var currentPosition = $("#search-container").css( "margin-top" )
+			// 											.replace( "px", "" );
+			// if( currentPosition > "100" ){
+			// 	$( "#search-container" ).animate(
+			// 		{ 'margin-top': '100px' }, 
+			// 		{ duration: 1500, queue: false }
+			// 	);
 
-				$( ".search-header" ).animate(
-					{ 'top': '100' }, 
-					{ duration: 1500, queue: false }
-				);
-			}// end if
+			// 	$( ".search-header" ).animate(
+			// 		{ 'top': '100' }, 
+			// 		{ duration: 1500, queue: false }
+			// 	);
+			// }// end if
 
 			beginSearch( query );
 		});
