@@ -33,3 +33,12 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
+
+### Environments Tested
+**Desktop**
+- Windows Chrome ver. 71.0.3578.98
+- Windows Firefox ver. 64.0.2
+
+**Mobile**
+- iPhone iOS ver. 12.1.3 | Safari
+- Samsung S6 Edge ver. 7.0 | Chrome, Firefox
