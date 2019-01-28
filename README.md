@@ -34,6 +34,11 @@ $ git push heroku master
 $ heroku open
 ```
 
+## Sources
+All graphic icons used in this application were downloaded from [Flaticon](https://www.flaticon.com/ "Flaticon").
+Credit is given to [Freepik](https://www.freepik.com/ "Freepik") and is licensed by [CC 3.0 BY](https://www.freepik.com/ "CC 3.0 BY") 
+
+
 ## Environments Tested
 **Desktop**
 - Windows Chrome ver. 71.0.3578.98
