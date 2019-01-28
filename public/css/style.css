@@ -2,11 +2,11 @@
 /* ----------------------------------- RESPONSIVE DESIGN  -------------------------------- */
 /* ======================================================================================= */
 
-/* Extra small devices (phones, 425px and down) */
-@media only screen and (max-width: 425px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
     h2 { font-size: 1.5em; }
 
-    #search-container { height: 310px; }
+    #search-button { font-size: 1.3em; }
 
     #search-container h2 { padding-top: 30px; margin: 25px 30px; }
 
@@ -16,13 +16,11 @@
 
     .header-wrapper img { height: 72px; width: 72px; }
 
-    .input-wrapper { border-radius: 30px; }
+    .input-wrapper { border-radius: 30px; padding: 20px; }
 
-    #input-field { padding: 20px; font-size: 1.3em; }
+    #input-field {font-size: 1.3em;}
 
-    #input-clear { font-size: 0.9em; }
-
-    #search-button { font-size: 1.3em; padding: 0 15px; }
+    #search-container { height: 310px; }
 
     .row-wrapper { flex-direction: column; }
 
@@ -33,13 +31,13 @@
     .book-details:before{ display: block; }
 } 
 
-/* Small devices (portrait tablets and large phones, 425px and up) */
-@media only screen and (min-width: 425px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)  {
     h2 { font-size: 1.4em; }
 
-    #search-container { height: 240px; }
-
     #search-container h2 { padding-top: 30px; margin: 25px 30px; }
+
+    #search-button { font-size: 1.1em; }
 
     .floating-header { margin-top: -50px; padding: 25px;}
  
@@ -47,13 +45,11 @@
 
     .header-wrapper img { height: 62px; width: 62px; }
 
-    .input-wrapper { border-radius: 30px; }
+    .input-wrapper { border-radius: 30px; padding: 15px; }
 
-    #input-field { padding: 15px; font-size: 1.2em; }
+    #input-field {/* padding: 15px; */font-size: 1.2em;}
 
-    #input-clear { font-size: 0.8em; }
-
-    #search-button { font-size: 1.1em; padding: 0 15px; }
+    #search-container { height: 240px; }
 
     .row-wrapper { flex-direction: column; }
 
@@ -65,12 +61,14 @@
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)  {
     h2 { font-size: 1.3em; }
 
-    #search-container { height: 220px; }
-
     #search-container h2 { padding-top: 10px; }
+
+    #search-button { font-size: 0.9em; }
+
+    #search-button { font-size: 1em; }
 
     .floating-header { margin-top: -40px; padding: 20px; }
 
@@ -78,11 +76,11 @@
 
     .header-wrapper img { height: 52px; width: 52px; }
 
-    .input-wrapper { border-radius: 20px; }
+    .input-wrapper { border-radius: 20px; padding: 10px; }
 
-    #input-field { padding: 10px; font-size: 1.15em; }
+    #input-field {/* padding: 10px; */font-size: 1.15em;}
 
-    #search-button { font-size: 1em; }    
+    #search-container { height: 220px; }
 
     .row-wrapper { flex-direction: row; }
 
@@ -94,39 +92,34 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px)  {
     h2 { font-size: 1.2em; }
 
-    #search-container { height: 190px; }
-
     #search-container h2 { padding-top: 0; }
+
+    #search-button { font-size: 0.8em; }
 
     .header-wrapper h5 { font-size: 0.93em; margin-top: 10px; }
 
     .header-wrapper img { height: 42px; width: 42px; }
 
-    #input-field { padding: 7px; font-size: 1em; }
+    #input-field { /*padding: 7px;*/ font-size: 1em; }
 
-    #input-clear { font-size: 0.7em; }
+    #search-container { height: 190px; }
 
-    #search-button { font-size: 0.8em; }
+    .floating-header { margin-top: -32px; padding: 15px; }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px)  {
     h2 { font-size: 1em; }
 
-    #search-container { height: 170px; }
-
-    .floating-header { margin-top: -32px; padding: 15px; }
-
-    .header-wrapper h5 { font-size: 0.83em; margin-top: auto; }
+    .header-wrapper h5 {font-size: 0.83em; margin-top: auto; }
 
     .header-wrapper img { height: 32px; width: 32px; }
 
-    #search-button{ padding: 10px; }
+    #search-container { height: 170px; }
 }
-
 /* ======================================================================================= */
 /* -------------------------------------- ANIMATIONS ------------------------------------- */
 /* ======================================================================================= */
@@ -267,7 +260,7 @@ article {
     align-items: center;
     max-width: calc(100% - 50px);
     max-height: 100%;
-    top: 100px;
+    top: 100;
 }
 
 .floating-header {
@@ -312,7 +305,7 @@ article {
 
 #input-field {
     width: 90%;
-    /*padding: 7px;*/
+    padding: 0 8px;
     border: 0;
     background: transparent;
     font-family: inherit;
@@ -322,7 +315,7 @@ article {
 
 #input-clear {
     position: relative;
-    /*font-size: 0.7em;*/
+    font-size: 0.7em;
     color: #bdbdbd;
     visibility: hidden;
     border: none;
@@ -360,6 +353,7 @@ article {
     display: none;
     max-height: fit-content;
     align-items: inherit;
+    overflow-x: hidden;
 }
 
 #loader {
@@ -367,7 +361,13 @@ article {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    word-break: break-word;
+    width: -moz-available;
+    width: -webkit-fill-available;
+}
+
+#loader h1 {
+    width: inherit;
+    overflow-wrap: break-word;
 }
 
 #loader img {
@@ -381,7 +381,7 @@ article {
     padding: 25px 0;
     margin: 0 55px;
     border-bottom: 1px dashed #607D8B;
-    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .results-none { 
@@ -438,6 +438,7 @@ article {
     display: flex;
     flex-direction: column;
     width: 60%;
+    word-wrap: break-word;
 }
 
 .book-info * {
