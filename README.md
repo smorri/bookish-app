@@ -1,4 +1,4 @@
-# boolook-app
+# booklook-app
 
 A Node.js application that allows users to search for books. The application utilizes the [Google Books API](https://developers.google.com/books/ "Google Books API") as its book search service. 
 
