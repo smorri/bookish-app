@@ -34,7 +34,7 @@ $ git push heroku master
 $ heroku open
 ```
 
-### Environments Tested
+## Environments Tested
 **Desktop**
 - Windows Chrome ver. 71.0.3578.98
 - Windows Firefox ver. 64.0.2
