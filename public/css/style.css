@@ -303,6 +303,11 @@ article {
     /*border-radius: 20px;*/
 }
 
+.input-wrapper[data-disabled] * {
+    pointer-events: none !important;
+    color: #bdbdbd !important;
+}
+
 #input-field {
     width: 90%;
     padding: 0 8px;
@@ -320,13 +325,6 @@ article {
     visibility: hidden;
     border: none;
     background: none;
-}
-
-#input-field[disabled],
-#input-clear[disabled],
-#search-button[disabled] {
-    pointer-events: none;
-    color: #bdbdbd;
 }
 
 #search-button {
