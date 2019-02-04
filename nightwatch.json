@@ -1,0 +1,30 @@
+{
+  "src_folders" : ["tests/testSuite"],
+  "output_folder" : "reports",
+  "globals_path" : "./tests/modules/globals/globalsModule.js",
+  "page_objects_path" : "./tests/modules/pageObject",
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./node_modules/selenium-server/lib/runner/selenium-server-standalone-3.141.59.jar",
+    "log_path" : "",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "./node_modules/chromedriver/lib/chromedriver/chromedriver.exe"
+    }
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "globals": {
+        "waitForConditionTimeout": 5000
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      }
+    }
+  }
+}
