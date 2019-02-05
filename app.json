@@ -2,5 +2,5 @@
 	"name": "BookLook App",
 	"description": "A Node.js application that utilizes the Google Books API",
 	"repository": "https://github.com/smorri/booklook-app",
-	"keywords": ["node", "express"]
+	"keywords": ["node", "express", "heroku", "nightwatchjs" ]
 }
