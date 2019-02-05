@@ -18,12 +18,6 @@ npm install
 npm start
 ```
 
-### Run Locally
-You can run the application locally by typing the following script into the command line: 
-```
-heroku local web
-```
-
 The application can be accessed [localhost:5000](http://localhost:5000/ "localhost:5000")
 
 ### Deploying to Heroku
@@ -32,6 +26,12 @@ If you would like to deploy this application to Heroku, input the following scri
 $ heroku create
 $ git push heroku master
 $ heroku open
+```
+
+### Run Locally via Heroku
+You can run the application locally by typing the following script into the command line: 
+```
+heroku local web
 ```
 
 ## Sources
@@ -47,8 +47,7 @@ Credit is given to [Freepik](https://www.freepik.com/ "Freepik") and is licensed
 - iPhone iOS ver. 12.1.3 | Safari
 - Samsung S6 Edge ver. 7.0 | Chrome, Firefox
 
-
-### Run Automated Tests
+## Run Automated Tests
 
 Input the following script into the command line:
 ```
