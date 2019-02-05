@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="searchResultsTest"
+    errors="0" failures="0" hostname="" id="" package="searchResultsTest" skipped="0"
+    tests="3" time="24.24" timestamp="">
+  
+    <testcase name="--&gt; Query Displays No Search Results" classname="searchResultsTest" time="8.213" assertions="11">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="--&gt; Query Displays Less Than the Maximum Number of Results" classname="searchResultsTest" time="7.918" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="--&gt; Query Displays the Maximum Number of Results" classname="searchResultsTest" time="8.113" assertions="13">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

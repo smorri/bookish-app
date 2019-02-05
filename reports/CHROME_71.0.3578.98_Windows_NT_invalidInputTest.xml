@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="invalidInputTest"
+    errors="0" failures="0" hostname="" id="" package="invalidInputTest" skipped="0"
+    tests="2" time="2.245" timestamp="">
+  
+    <testcase name="--&gt; No Search Input Triggers Error" classname="invalidInputTest" time="1.348" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="--&gt; Only Whitespace Input Triggers Error" classname="invalidInputTest" time="0.8970" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
